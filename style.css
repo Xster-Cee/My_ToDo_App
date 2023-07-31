@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(126, 221, 208, 0.18), rgba(151, 110, 82, 0.138)),  url(./Assets/Images/todo_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.todo_app {
+    width: 100%;
+    max-width: 540px;
+    background: #f5f2f2e0;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 4, 5, 0.18) 0px 10px 20px 0px, rgba(5, 4, 4, 0.138) 0px 10px 20px 0px;
+}
+
+.todo_app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo_app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ADBAFB;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #FCDE6F;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border: 2px dashed #ADBAFB;
+    border-radius: 50%;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    /* color: #ADBAFB; */
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./Assets/Images/icons8-checkmark-16.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    font-weight: 900;
+    /* color: #FCDE6F; */
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: linear-gradient(135deg, #ADBAFB, #FCDE6F);
+}
