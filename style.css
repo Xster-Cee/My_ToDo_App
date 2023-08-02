@@ -119,3 +119,19 @@ ul li span {
 ul li span:hover {
     background: linear-gradient(135deg, #ADBAFB, #FCDE6F);
 }
+
+/* media query */
+@media only screen and (max-width: 425px) {
+    .todo_app {
+        max-width: 350px;
+    }
+
+    .content {
+        padding-left: 10px;
+    }  
+
+    
+button {
+    padding: 16px 30px;
+}
+}
